@@ -188,7 +188,7 @@ body {
   #HEADER
 \*-----------------------------------*/
 
-.navbar, .header, .btn {display: none;}
+.header, .btn {display: none;}
 
 .header {
   position: fixed;
@@ -212,8 +212,87 @@ body {
   100% {transform: translateY(0);}
 }
 
+.container, .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
 
+.nav-open-btn, .nav-close-btn {
+  color: var(--text-wild-blue-yonder);
+  font-size: 3.5rem;
+}
 
+.navbar {
+  position: absolute;
+  top: 0;
+  right: -340px;
+  max-width: 340px;
+  width: 100%;
+  height: 100vh;
+  background-color: var(--bg-oxford-blue-2);
+  padding: 30px;
+  z-index: 2;
+  overflow-y: auto;
+  visibility: hidden;
+  transition: 0.25s var(--cubic-in);
+}
+
+.navbar.active {
+  transform: translateX(-340px);
+  visibility: visible;
+  transition: o.5s var(--cubic-out)
+}
+
+.navbar-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-block: 15px;
+  margin-block-end: 15px;
+  border-block-end: 1px solid var(--border-prussian-blue);
+}
+
+.navbar-list {
+  border-block-end: 1px solid var(--border-white-alpha-15);
+}
+
+.navbar-link {
+  color: var(--text-alice-blue);
+  font-weight: var(--weight-medium);
+  padding-block: 10px;
+}
+
+.navbar-bottom {
+  padding-block: 30px 20px;
+  margin-block: 20px 25px;
+  border-block: 1px solid var(--border-prussian-blue);
+}
+
+.navbar, .profile-card {
+  margin-block-end: 15px;
+}
+.navbar {
+  color: var(--text-carolina-blue);
+  font-size: var(--fontSize-6);
+  font-weight: var(--weight-semiBold);
+}
+.navbar .link-list {
+  columns: 2;
+  -webkit-columns: 2;
+}
+
+.navbar-bottom-link {
+  color: var(--text-alice-blue);
+  font-size: var(--fontSize-6);
+  padding-block: 6px;
+}
+
+.copyright-text {
+  color: var(--text-alice-blue);
+  font-size: var(--fontSize-8);
+}
 /*-----------------------------------*\
   #HERO
 \*-----------------------------------*/
