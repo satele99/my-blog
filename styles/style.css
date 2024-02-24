@@ -237,7 +237,7 @@ body {
   /* background-image: var(--gradient-2); */
   background-position: left;
   color: var(--white);
-  font-size: var(--fontSize-6);
+  font-size: var(--fontSize-4);
   font-weight: var(--weight-bold);
   max-width: max-content;
   display: flex;
@@ -417,6 +417,10 @@ body {
   color: var(--text-alice-blue);
   font-weight: var(--weight-medium);
   padding-block: 10px;
+}
+
+.navbar-link:hover {
+  color: var(--bg-carolina-blue);
 }
 
 .navbar-bottom {
@@ -1324,14 +1328,10 @@ body {
   .header .btn { margin-inline-start: 0; }
 
   .navbar-link {
-    color: var(--text-wild-blue-yonder);
-    font-weight: unset;
+    display: none;
   }
 
-  .navbar-link:is(:hover, :focus-visible) {
-    color: var(--text-carolina-blue);
-    transform: translateX(0);
-  }
+  
 
 
 
