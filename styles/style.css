@@ -18,17 +18,21 @@
   --bg-carolina-blue: hsla(199, 89%, 49%, 1);
   --bg-prussian-blue: hsla(216, 33%, 20%, 1);
   --bg-oxford-blue: hsla(222, 44%, 13%, 1);
-  --bg-oxford-blue-2: hsla(222, 47%, 11%, 1);
+  --bg-oxford-magenta: rgba(30, 24, 43, 0.788);
+  /* --bg-oxford-blue-2: hsla(222, 47%, 11%, 1); */
+  --bg-oxford-blue-2: hsla(287, 22%, 16%, 1);
 
   --text-white: hsla(0, 0%, 100%, 1);
   --text-alice-blue: hsla(216, 100%, 95%, 1);
   --text-columbia-blue: hsla(199, 69%, 84%, 1);
   --text-wild-blue-yonder: hsla(216, 33%, 68%, 1);
-  --text-carolina-blue: hsla(199, 89%, 49%, 1);
+  /* --text-carolina-blue: hsla(199, 89%, 49%, 1); */
+  --text-carolina-blue: hsla(267, 54%, 45%, 1);
   --text-shadow-blue: hsla(217, 24%, 59%, 1);
   --text-slate-gray: hsla(217, 17%, 48%, 1);
 
-  --gradient-1: linear-gradient(90deg, #0ea5ea, #0bd1d1 51%);
+  /* --gradient-1: linear-gradient(90deg, #0ea5ea, #0bd1d1 51%); */
+  --gradient-1: linear-gradient(90deg,  hsl(267, 57%, 39%), hsl(267, 63%, 54%) 51%);
   --gradient-2: linear-gradient(90deg, #0ea5ea, #0bd1d1 51%, #0ea5ea);
   --gradient-3: linear-gradient(0deg, #000d1a, transparent);
 
@@ -61,7 +65,8 @@
   --lineHeight-4: 1.5;
 
   --shadow-1: 0 8px 20px 0 hsla(0, 0%, 0%, 0.05);
-  --shadow-2: 0px 3px 20px hsla(180, 90%, 43%, 0.2); 
+  --shadow-2: 0px 3px 20px hsla(267, 59%, 55%, 0.2); 
+  /* --shadow-2: 0px 3px 20px hsla(180, 90%, 43%, 0.2);  */
 
   --radius-6: 6px;
   --radius-8: 8px;
@@ -77,7 +82,7 @@
   --cubic-in: cubic-bezier(0.51, 0.03, 0.64, 0.28);
   --cubic-out: cubic-bezier(0.05, 0.83, 0.52, 0.97);
 
-  }
+}
 
 
 
@@ -141,6 +146,7 @@ html {
 }
 
 body {
+  /* background-color: #272029; */
   background-color: var(--bg-oxford-blue-2);
   color: var(--text-shadow-blue);
   font-family: var(--fontFamily-noto_sans);
@@ -192,7 +198,8 @@ body {
 .profile-card .profile-banner { border-radius: var(--radius-circle); }
 
 .headline {
-  color: var(--text-columbia-blue);
+  /* color: var(--text-columbia-blue); */
+  color: #fff;
   line-height: var(--lineHeight-1);
 
 }
@@ -221,6 +228,7 @@ body {
 
 .btn {
   background-image: var(--gradient-2);
+  background-image: var(--gradient-1);
   background-size: 200%;
   background-position: left;
   color: var(--white);
@@ -268,9 +276,10 @@ body {
 .w-100 { width: 100%; }
 
 .card {
-  background-color: #272029;
+  /* background-color: #272029; */
   /* background-color: var(--bg-oxford-blue); */
-  border: 1px solid var(--border-prussian-blue);
+  background-color: var(--bg-oxford-magenta);
+  /* border: 1px solid var(--border-prussian-blue); */
 }
 
 .img-holder {
@@ -482,9 +491,11 @@ body {
   position: relative;
   padding: 10px;
   padding-inline-start: 20px;
-  background-color: var(--bg-prussian-blue);
+  /* background-color: var(--bg-prussian-blue); */
+  background-color: var(--bg-oxford-blue-2);
   border-radius: var(--radius-6);
-  border: 1px solid var(--bg-carolina-blue);
+  border: 1px solid rgb(83, 38, 138);
+  /* border: 1px solid var(--bg-carolina-blue); */
   display: flex;
   justify-items: flex-end;
   transition: var(--transition-1);
@@ -601,7 +612,8 @@ body {
 }
 
 .slider-title {
-  color: var(--text-columbia-blue);
+  /* color: var(--text-columbia-blue); */
+  color: #fff;
   font-weight: var(--weight-bold);
   margin-block-end: 5px;
   transition: var(--transition-1);
@@ -668,7 +680,7 @@ body {
   left: -20px;
   width: 48px;
   height: 48px;
-  background-color: var(--bg-oxford-blue-2);
+  /* background-color: var(--bg-oxford-blue-2); */
   border-radius: var(--radius-circle);
   z-index: -1;
 }
@@ -725,7 +737,7 @@ body {
 .recent-post-card {
   display: grid;
   gap: 30px;
-  background-color: #272029;
+  /* background-color: #272029; */
   border-radius: var(--radius-16);
 }
 
@@ -895,6 +907,12 @@ body {
 
 .footer-brand .footer-text { font-size: var(--fontSize-6); }
 
+.footer-brand {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .footer-text:not(.address) { margin-block: 20px; }
 
 .footer-brand .footer-list-title { margin-block-end: 2px; }
@@ -983,12 +1001,14 @@ body {
   right: 20px;
   width: 50px;
   height: 50px;
-  background-color: var(--bg-prussian-blue);
+  background-color: var(--bg-oxford-blue-2);
+  /* background-color: var(--bg-prussian-blue); */
   color: var(--white);
   display: grid;
   place-items: center;
   border-radius: var(--radius-circle);
-  border: 3px solid var(--bg-carolina-blue);
+  border: 3px solid rgb(83, 38, 138);
+  /* border: 3px solid var(--bg-carolina-blue); */
   transition: var(--transition-1);
   visibility: hidden;
   opacity: 0;
